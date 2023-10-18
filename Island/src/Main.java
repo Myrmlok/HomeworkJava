@@ -26,6 +26,11 @@ public class Main {
                     }
                   }
                 }
+                else{
+                  if(!contains(points,new Point(i,j))){
+                    res++;
+                  }
+                }
             }
           if(checkIMore(map,i)){
             if(map[i+1][j]=='*') {
@@ -36,6 +41,11 @@ public class Main {
                 if(!contains(points,new Point(i,j))){
                   res++;
                 }
+              }
+            }
+            else{
+              if(!contains(points,new Point(i,j))){
+                res++;
               }
             }
           }
@@ -50,6 +60,11 @@ public class Main {
                 }
               }
             }
+            else{
+              if(!contains(points,new Point(i,j))){
+                res++;
+              }
+            }
           }
           if(checkIMinus(map,i)){
             if(map[i-1][j]=='*') {
@@ -60,6 +75,11 @@ public class Main {
                 if(!contains(points,new Point(i,j))){
                   res++;
                 }
+              }
+            }
+            else{
+              if(!contains(points,new Point(i,j))){
+                res++;
               }
             }
           }
