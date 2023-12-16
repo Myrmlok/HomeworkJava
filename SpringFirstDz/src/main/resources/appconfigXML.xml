@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="comedy"
+        class="Comedy">
+    <property name="name" value="Кунг-фу-панда"/>
+    </bean>
+    <bean id="drama"
+          class="Drama">
+        <property name="name" value="Титаник"/>
+    </bean>
+    <bean id="player1"
+          class="Player"
+    >
+        <property name="typeCinema" ref="comedy"/>
+    </bean>
+    <bean id="player2"
+          class="Player"
+
+    >
+     <constructor-arg ref="drama"/>
+
+    </bean>
+</beans>
